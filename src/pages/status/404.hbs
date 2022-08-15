@@ -1,0 +1,31 @@
+---
+title: "404"
+subtitle: "Не туда попали"
+link: "Назад к чатам"
+styles: {
+title: "label label-xl",
+subtitle: "label status__label label-l",
+link: "button-link",
+linkLabel: "label button__label-link label-s"
+}
+---
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../common.less">
+    <title>{{title}}</title>
+</head>
+
+<body>
+    <main class="fv cent main">
+        <div class="{{styles.title}}">{{title}}</div>
+        <div class="{{styles.subtitle}}">{{subtitle}}</div>
+        <a class="{{styles.link}}" href="../../index.hbs">
+            <span class="{{styles.linkLabel}}">{{link}}</span>
+        </a>
+    </main>
+</body>
+
+</html>

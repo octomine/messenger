@@ -1,0 +1,62 @@
+---
+title: "Register"
+formTitle: "Регистрация"
+labelAuth: "Зарегистрироваться"
+labelSign: "Войти"
+fields: [
+{title: "Почта", error: "Обязательное поле"},
+{title: "Логин", error: "Обязательное поле"},
+{title: "Имя"},
+{title: "Фамилия"},
+{title: "Телефон"},
+{title: "Пароль", error: "Обязательное поле"},
+{title: "Пароль (ещё раз)", error: "Пароли не совпадают"}
+]
+styles: {
+form: "fv plate",
+label: "label plate__label label-l",
+content: "contentHolder-sign",
+input: "input label-m",
+inputLabel: "label input__label label-s",
+error: "label label-error",
+buttonAuth: "button",
+labelAuth: "label button__label label-m",
+buttonSign: "plate__link button-link",
+labelSign: "label button__label-link label-s"
+}
+---
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../common.less">
+    <title>{{title}}</title>
+</head>
+
+<body>
+    <main class="fv cent main">
+        <div class="{{styles.form}}">
+            <span class="{{styles.label}}">{{formTitle}}</span>
+            <ul class="{{styles.content}}">
+                {{#each fields}}
+                <li>
+                    <div class="inputWrapper">
+                        <div class="{{../styles.inputLabel}}">{{this.title}}</div>
+                        <input class="{{../styles.input}}" placeholder="{{this.title}}"></input>
+                        {{#if error}}<div class="{{../styles.error}}">{{this.error}}</div>{{/if}}
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+            <a class="{{styles.buttonAuth}} fv cent" href="../status/500.hbs">
+                <span class="{{styles.labelAuth}}">{{labelAuth}}</span>
+            </a>
+            <button class="{{styles.buttonSign}}" onclick="location.href='../../index.hbs'">
+                <span class="{{styles.labelSign}}">{{labelSign}}</span>
+            </button>
+        </div>
+    </main>
+</body>
+
+</html
