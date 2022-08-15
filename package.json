@@ -1,5 +1,5 @@
 {
-  "name": "diff",
+  "name": "messenger",
   "version": "1.0.0",
   "description": "",
   "source": "./src/index.hbs",
@@ -17,6 +17,7 @@
     "parcel": "^2.7.0"
   },
   "dependencies": {
+    "express": "^4.18.1",
     "handlebars": "^4.7.7"
   }
 }
