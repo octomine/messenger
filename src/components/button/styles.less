@@ -1,0 +1,26 @@
+.button {
+  width: 280px;
+  height: 37px;
+  border: none;
+  border-radius: @radiusButton;
+  background: @colorPrimary;
+  cursor: pointer;
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+  &-link {
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+}
+
+.button__label {
+  color: @colorInvert;
+
+  &-link {
+    color: @colorPrimary;
+  }
+}
