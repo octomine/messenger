@@ -1,0 +1,7 @@
+<ul {{#if styles}}class="{{styles}}" {{/if}}>
+    {{#each fields}}
+    <li>
+        {{> input this}}
+    </li>
+    {{/each}}
+</ul>
