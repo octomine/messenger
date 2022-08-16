@@ -23,7 +23,7 @@ const ctx = {
   },
   footer: () => "button",
   footerCtx: {
-    styles: "login__footer",
+    styles: "footer",
     label: "Нет аккаунта?",
     mod: "link",
   },
