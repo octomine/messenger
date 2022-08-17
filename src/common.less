@@ -3,27 +3,37 @@
 @import "./components/plate/styles.less";
 @import "./components/input/styles.less";
 @import "./components/button/styles.less";
+@import "./components/button-arrow/styles.less";
 @import "./components/label/styles.less";
 
 // PAGES
 @import "./pages/login/styles.less";
 @import "./pages/registration/styles.less";
+@import "./pages/profile/styles.less";
 @import "./pages/status/styles.less";
 
 // VARS
 @colorPrimary: #3369f3;
 @colorSecondary: #1e1e1e;
 @colorSecondaryLight: #999999;
+@colorSecondaryLighter: #efefef;
+@colorSecondaryLightest: #fbfbfb;
 @colorInvert: white;
-@colorError: #ff2f2f;
+@colorAlarm: #ff2f2f;
 
 @shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
 
 @radiusContainer: 12px;
 @radiusButton: 8px;
 
+@arrowRight: url("./assets/arrow-right.svg") center no-repeat;
+@arrowLeft: url("./assets/arrow-left.svg") center no-repeat;
+@blankImage: url("./assets/blank-image.svg") center no-repeat;
+
 // TAGS
 body {
+  padding: 0;
+  margin: 0;
   height: 100vh;
 }
 
@@ -38,6 +48,12 @@ a {
 }
 
 // CLASSES
+.fh {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .fv {
   display: flex;
   flex-direction: column;

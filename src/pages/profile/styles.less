@@ -1,0 +1,17 @@
+@import "./components/avatar/styles.less";
+@import "./components/line/styles.less";
+@import "./components/list/styles.less";
+
+@buttonHolderWidth: 64px;
+
+.buttonHolder {
+  width: @buttonHolderWidth;
+  height: 100vh;
+  border-right: solid 1px @colorSecondaryLighter;
+  background: @colorSecondaryLightest;
+  cursor: pointer;
+}
+
+.profileWrapper {
+  width: calc(100vw - @buttonHolderWidth);
+}

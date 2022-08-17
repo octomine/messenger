@@ -2,7 +2,7 @@ import "../../components/button";
 import "../../components/label";
 import "../../components/form";
 import "../../components/input";
-import "../../components/titled-action-wrapper";
+import "../../wrappers/titled-action-wrapper";
 
 import tmpl from "./tmpl.hbs";
 
