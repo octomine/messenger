@@ -1,5 +1,5 @@
 <div class="inputWrapper">
     {{> label txt=title mod="s" styles=" input__label"}}
     <input class="input label-m" placeholder="{{title}}" {{#if password}}type="password" {{/if}} />
-    {{#if error}}{{> label txt=error mod="error"}}{{> label}}{{/if}}
+    {{#if error}}{{> label txt=error styles="label-error label-xs"}}{{> label}}{{/if}}
 </div>
