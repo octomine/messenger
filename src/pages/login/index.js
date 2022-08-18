@@ -1,8 +1,9 @@
+import "../../components/common/styles";
 import "../../components/button";
 import "../../components/label";
 import "../../components/form";
 import "../../components/input";
-import "../../components/titled-action-wrapper";
+import "../../wrappers/form-wrapper";
 
 import tmpl from "./tmpl.hbs";
 
@@ -10,22 +11,19 @@ const ctx = {
   title: {
     txt: "Вход",
   },
-  content: () => "form",
-  contentCtx: {
-    styles: "login__content",
+  form: {
     fields: [
       { title: "Логин", error: "Неверный логин" },
       { title: "Пароль", error: "Неверный пароль", password: true },
     ],
+    block: "login",
   },
   button: {
     label: "Авторизоваться",
   },
-  footer: () => "button",
-  footerCtx: {
-    styles: "footer",
+  link: {
     label: "Нет аккаунта?",
-    mod: "link",
+    styles: "footer",
   },
 };
 

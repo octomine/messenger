@@ -1,8 +1,9 @@
+import "../../components/common/styles";
 import "../../components/button";
 import "../../components/label";
 import "../../components/form";
 import "../../components/input";
-import "../../components/titled-action-wrapper";
+import "../../wrappers/form-wrapper";
 
 import tmpl from "./tmpl.hbs";
 
@@ -10,9 +11,7 @@ const ctx = {
   title: {
     txt: "Регистрация",
   },
-  content: () => "form",
-  contentCtx: {
-    styles: "registration__content",
+  form: {
     fields: [
       { title: "Почта", error: "Обязательное поле" },
       { title: "Логин", error: "Обязательное поле" },
@@ -22,15 +21,13 @@ const ctx = {
       { title: "Пароль", error: "Обязательное поле" },
       { title: "Пароль (ещё раз)", error: "Пароли не совпадают" },
     ],
+    block: "registration",
   },
   button: {
     label: "Зарегистрироваться",
   },
-  footer: () => "button",
-  footerCtx: {
-    styles: "footer",
+  link: {
     label: "Войти",
-    mod: "link",
   },
 };
 

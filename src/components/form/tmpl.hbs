@@ -1,4 +1,4 @@
-<ul {{#if styles}}class="{{styles}}" {{/if}}>
+<ul class="{{> styles element="form"}}">
     {{#each fields}}
     <li>
         {{> input this}}
