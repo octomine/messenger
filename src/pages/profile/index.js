@@ -1,4 +1,6 @@
+import "../../components/common/styles";
 import "../../components/button-arrow";
+import "../../components/label";
 import "../../components/button";
 
 import "./components/avatar";
@@ -15,7 +17,11 @@ const ctx = {
   profile: {
     content: () => "list",
     contentCtx: {
-      title: "Восилей",
+      title: {
+        txt: "Восилей",
+        block: "list",
+        modifiers: "list",
+      },
       lineType: () => "line",
       fields: [
         { key: "Почта", value: "adf@mail.ru" },
@@ -25,16 +31,17 @@ const ctx = {
         { key: "Имя в чате", value: "VoPup" },
         { key: "Телефон", value: "+7 (321) 987-45-33" },
       ],
+      modifiers: "titled",
     },
     footer: () => "list",
     footerCtx: {
       lineType: () => "lineLink",
-      styles: "footer__list",
       fields: [
         { label: "Изменить данные" },
         { label: "Изменить пароль" },
-        { label: "Выйти" }, // TODO: прокинуть красный!!1
+        { label: "Выйти", modifiers: "alert" },
       ],
+      block: "footer",
     },
   },
   change: {
@@ -52,8 +59,8 @@ const ctx = {
     },
     footer: () => "button",
     footerCtx: {
-      styles: "footer__button",
       label: "Сохранить",
+      block: "footer",
     },
   },
   changePassword: {
@@ -68,8 +75,8 @@ const ctx = {
     },
     footer: () => "button",
     footerCtx: {
-      styles: "footer__button",
       label: "Сохранить",
+      block: "footer",
     },
   },
 };

@@ -1,7 +1,7 @@
 {{#if title}}
-<div class="label label-list list__label">{{title}}</div>
+{{> label title}}
 {{/if}}
-<ul class="list{{#if title}}-titled{{/if}} {{styles}}">
+<ul class="{{> styles element="list" modifiers=(split modifiers)}}">
     {{#each fields}}
     {{> (../lineType) this}}
     {{/each}}

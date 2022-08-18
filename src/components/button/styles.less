@@ -1,9 +1,13 @@
 .button {
+  padding: 0;
   width: 280px;
   height: 37px;
   border: none;
   border-radius: @radiusButton;
   background: @colorPrimary;
+  color: @colorInvert;
+  font-size: @fontSizeM;
+  white-space: nowrap;
   cursor: pointer;
 
   &:active {
@@ -11,17 +15,15 @@
   }
 
   &-link {
-    cursor: pointer;
-    border: none;
+    width: min-content;
+    height: min-content;
     background: none;
-  }
-}
-
-.button__label {
-  color: @colorInvert;
-
-  &-link {
     color: @colorPrimary;
+    font-size: @fontSizeS;
+
+    &:active {
+      transform: translateY(0);
+    }
   }
   &-alert {
     color: @colorAlarm;

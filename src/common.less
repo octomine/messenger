@@ -1,17 +1,17 @@
 // IMPORTS
 // COMPONENTS
-@import "./components/plate/styles.less";
 @import "./components/input/styles.less";
 @import "./components/button/styles.less";
 @import "./components/button-arrow/styles.less";
 @import "./components/label/styles.less";
+@import "./wrappers/popup-wrapper/styles.less";
 
 // PAGES
 @import "./pages/login/styles.less";
 @import "./pages/registration/styles.less";
 @import "./pages/profile/styles.less";
 @import "./pages/status/styles.less";
-@import "./pages/popups/styles.less";
+@import "./popups/styles.less";
 
 // VARS
 @colorPrimary: #3369f3;
@@ -21,6 +21,12 @@
 @colorSecondaryLightest: #fbfbfb;
 @colorInvert: white;
 @colorAlarm: #ff2f2f;
+
+@fontSizeXS: 8px;
+@fontSizeS: 11px;
+@fontSizeM: 13px;
+@fontSizeL: 20px;
+@fontSizeXL: 40px;
 
 @shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
 
@@ -68,6 +74,18 @@ a {
 .main {
   width: 100%;
   height: 100%;
+}
+
+.plate {
+  width: 340px;
+  padding: 50px 0 30px;
+  border-radius: @radiusContainer;
+  background: @colorInvert;
+  box-shadow: @shadow;
+
+  &-popup {
+    padding: 40px 0;
+  }
 }
 
 .footer {

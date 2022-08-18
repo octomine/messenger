@@ -1,3 +1,4 @@
+import "../../components/common/styles";
 import "../../components/button";
 import "../../components/label";
 
@@ -6,12 +7,12 @@ import tmpl from "./tmpl.hbs";
 const ctx = {
   404: {
     title: { txt: "404" },
-    subtitle: { txt: "Не туда попали", styles: "status__label" },
+    subtitle: { txt: "Не туда попали", block: "status" },
     link: { label: "Назад к чатам" },
   },
   500: {
     title: { txt: "500" },
-    subtitle: { txt: "Мы уже фиксим", styles: "status__label" },
+    subtitle: { txt: "Мы уже фиксим", block: "status" },
     link: { label: "Назад к чатам" },
   },
 };
